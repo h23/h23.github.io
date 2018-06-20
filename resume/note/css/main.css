@@ -1,0 +1,174 @@
+body, ul, h2, h1, p, h3{
+    margin:0px;
+    padding: 0px;
+}
+body{
+    color: #444;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color:#444;
+}
+i{
+    font-family: "icomoon";
+    font-style: normal;
+}
+img{
+    vertical-align: middle;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?ikvnmk');
+  src:  url('../fonts/icomoon.eot?ikvnmk#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?ikvnmk') format('truetype'),
+    url('../fonts/icomoon.woff?ikvnmk') format('woff'),
+    url('../fonts/icomoon.svg?ikvnmk#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*头部开始*/
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+header div{
+    height: 50px;
+    padding:0 100px;
+    background-color: #722872;
+    line-height: 50px;
+    color: #fff;
+}
+header h1,header p{
+    float: left;
+}
+header p:nth-of-type(2){
+    float: right;
+}
+header p{
+    font-size: 20px;
+    font-weight: 900;
+    width:20%;
+    text-align: center;
+}
+header p:nth-of-type(1){
+    cursor: pointer;
+}
+header p:nth-of-type(1):hover{
+    text-shadow:0 0 10px rgb(255,255,255,0.5);
+    text-decoration: underline;
+}
+header p:nth-of-type(1) i{
+    font-weight: normal;
+    font-size: 15px;
+}
+header div{
+    zoom:1;
+}
+header div:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+/*头部结束*/
+
+
+
+
+/*侧边导航栏开始*/
+aside{
+    width:15%;
+    height: 100%;
+    margin-top: 50px;
+    float: left;
+
+}
+.navControl{
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+.navControl span{
+    cursor: pointer;
+}
+aside>ul{
+    overflow: auto;
+}
+aside>ul, aside>h2{
+    padding-left: 20px;
+    margin-top: 20px;
+}
+aside h2{
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 30px;
+}
+aside ul h2:hover, .innerItem li:hover{
+    background-color: #3aa6ce;
+    color: white;
+}
+.innerItem li{
+    padding:5px;
+}
+aside ul .active, .innerItem .active a{
+    background-color: #3aa6ce;
+    color: white;
+}
+aside h2 i{
+    font-size: 15px;
+}
+aside .innerItem{
+    padding-left: 1em;
+}
+aside ul h2{
+    cursor: pointer;
+}
+aside ul ul{
+    display: none;
+}
+/*侧边导航栏开始*/
+
+
+/*笔记区开始*/
+#main{
+    width: 84%;
+    float: left;
+    margin-top: 60px;
+    box-shadow: 0 0 10px 10px #ccc ;
+    position: relative;
+    overflow: auto;
+}
+#main div{
+    width: 800px;
+    position: absolute;
+    text-align: center;
+    border: 1px solid #ccc;
+    margin:10px auto;
+}
+#main div h3{
+    font-size: 20px;
+    line-height: 50px;
+    background: white;
+}
+#main div img{
+    width: 100%;
+    height: auto;
+}
+#main div span{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width:50px;
+    height: 50px;
+    line-height: 50px;
+    cursor: pointer;
+    background: #eee;
+}
+/*笔记区结束*/

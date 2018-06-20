@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>title</title>
+
+</head>
+<body>
+<input type="button" value="按钮" id="btn"/>
+<script src="common.js"></script>
+<script>
+
+  //为任意元素.绑定任意的事件, 任意的元素,事件的类型,事件处理函数
+  //事件绑定兼容
+  function bind(element,type,fn) {
+    //判断浏览器是否支持这个方法
+    if(element.addEventListener){
+      element.addEventListener(type,fn,false);
+    }else{
+      element.attachEvent("on"+type,function(){
+        fn.call(element);/*this指向*/
+      });
+    }
+  }
+  //j解绑事件兼容
+  function unbind(element,type,fn) {
+    if(element.removeEventListener){
+      element.removeEventListener(type,fn,false);
+    }else{
+      element.detachEvent("on"+type,fn);
+    }
+  }
+var ev = ev || event;
+var eventTarget= ev.target || ev.srcElement;
+ev.cancelBubble=true;/*IE低版本*/
+ev.stopPropagation();
+// ev.pageX IE8不支持，建议用clientX获取鼠标位置
+//pageX = clientX + 页面距离
+
+
+</script>
+</body>
+</html>

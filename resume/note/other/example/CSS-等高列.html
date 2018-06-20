@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>多列动态等高</title>
+    <meta charset="utf-8">
+    <!-- <link rel="stylesheet" type="text/css" href="./assets/css/algorithm.css"> -->
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    /*方法1:负空间*/
+    #container1 {
+        overflow: hidden;
+        border: 1px solid black;
+    }
+    #container1 div {
+        float: left;
+        width: 20%;
+        min-height: 100px;
+        margin-right: 10px;
+        padding-bottom: 9999px;
+        margin-bottom: -9999px;
+    }
+    .box1 {
+        background-color: red;
+    }
+
+    .box2 {
+        background-color: blue;
+    }
+
+    .box3 {
+        background-color: red;
+    }
+    /*方法1:负空间*/
+
+    /*方法2:表格*/
+    #container2 {
+        display: table;
+        width: 100%;
+        margin-top: 50px;
+        border: 1px solid black;
+        border-spacing: 10px;
+    }
+    #row {
+        display: table-row;
+    }
+
+    #row div {
+        display: table-cell;
+        width: 33%;
+        margin-right: 10px;
+        border: 1px solid black;
+    }
+    /*方法2:表格*/
+
+    </style>
+</head>
+
+<body>
+    <!--方法1：负margin-->
+    <div id="container1">
+        <div class="box1">box1</div>
+        <div class="box2">box2
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+        <div class="box3">box3</div>
+    </div>
+    <!--方法1：负margin-->
+
+    <!--方法2：表格-->
+    <div id="container2">
+        <div id="row">
+            <div class="box1">box1</div>
+            <div class="box2">box2
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+            <div class="box3">box3</div>
+        </div>
+    </div>
+    <!--方法2：表格-->
+
+</body>
+
+</html>

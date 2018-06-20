@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>$永远的24k纯帅$</title>
+  <style>
+    div {
+      width: 200px;
+      height: 150px;
+      border: 2px solid red;
+    }
+  </style>
+</head>
+<body>
+
+<input type="button" value="设置值" id="btn"/>
+<div id="dv">哦,太神奇了</div>
+
+<script src="common.js"></script>
+<script>
+  //设置标签中的文本内容,应该使用textContent属性,谷歌,火狐支持,IE8不支持
+  //设置标签中的文本内容,应该使用innerText属性,谷歌,火狐,IE8都支持
+
+  //如果这个属性在浏览器中不支持,那么这个属性的类型是undefined
+  //判断这个属性的类型 是不是undefined,就知道浏览器是否支持
+
+  //兼容代码
+
+  //设置任意的标签中间的任意文本内容
+  function setInnerText(element,text) {
+    //判断浏览器是否支持这个属性
+    if(typeof element.textContent =="undefined"){//不支持
+      element.innerText=text;
+    }else{//支持这个属性
+      element.textContent=text;
+    }
+  }
+
+  //获取任意标签中间的文本内容
+  function getInnerText(element) {
+    if(typeof element.textContent=="undefined"){
+     return element.innerText;
+    }else{
+      return element.textContent;
+    }
+  }
+
+  //测试
+
+  my$("btn").onclick=function () {
+    //console.log(getInnerText(my$("dv")));
+    setInnerText(my$("dv"),"哈哈,我又变帅了");
+  };
+
+
+</script>
+</body>
+</html>

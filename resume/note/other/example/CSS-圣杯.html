@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>圣杯</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            padding:0 100px 0 100px;
+            overflow: hidden;
+        }
+        .container>div{
+            float: left;
+            min-height: 100px;
+            padding-bottom: 9999px;
+            margin-bottom: -9999px;
+        }
+        .left, .right{
+            width: 100px;
+            background-color: blue;
+            position: relative;
+        }
+        .middle{
+            width: 100%;
+            background-color: red;
+        }
+        .left{
+            margin-left: -100%;
+            left:-100px;
+        }
+        .right{
+            margin-left: -100px;
+            left:100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="middle">中间
+                <br>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+        <div class="left">左边</div>
+        <div class="right">右边</div>
+    </div>
+</body>
+</html>

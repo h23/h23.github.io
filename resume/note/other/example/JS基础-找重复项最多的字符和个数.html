@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>找重复项最多的字符和个数</title>
+</head>
+
+<body>
+    <p>找出重复项最多的字符和个数</p>
+    <input type="text" value="请输入字符">
+    <button>提交</button>
+    <p></p>
+    <script>
+    var btn = document.getElementsByTagName('button')[0];
+    var text = document.getElementsByTagName('input')[0];
+    var result = document.getElementsByTagName('p')[1];
+
+    text.onfocus = function() {
+        this.value = "";
+    }
+    text.onblur = function() {
+        if (this.value == "") {
+            this.value = "请输入字符";
+        }
+    }
+    btn.onclick = function() {
+        var str = text.value;
+
+        //方法1
+        // var newStr = str.split('').sort().join('');
+
+        // var maxStr = '';
+        // var count = 0;
+        // var re = /(\w)\1+/g;
+
+        // newStr.replace(re, function($0, $1) {
+        //     if (count < $0.length) {
+        //         count = $0.length;
+        //         maxStr = $1;
+        //     }
+        // });
+
+
+        //方法2
+        var obj = {};
+        for (var i = 0; i < str.length; i++) {
+            if (!obj[str[i]]) {
+                obj[str[i]] = 1;
+            } else {
+                obj[str[i]]++;
+            }
+        }
+
+        var maxStr = "";
+        var count = 0;
+        for (var key in obj) {
+            if (obj[key] > count) {
+                count = obj[key];
+                maxStr = key;
+            }
+        }
+
+
+        result.innerHTML = "出现次数最多的字符是：" + maxStr + ", 出现次数：" + count;
+    }
+
+    </script>
+</body>
+
+</html>

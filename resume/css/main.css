@@ -1,0 +1,299 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?spb72o');
+  src:  url('../fonts/icomoon.eot?spb72o#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?spb72o') format('truetype'),
+    url('../fonts/icomoon.woff?spb72o') format('woff'),
+    url('../fonts/icomoon.svg?spb72o#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+body{
+    background-color: #F6F6F6;
+}
+h1,h2,ul,ol,p{
+    margin:0;
+    padding:0;
+}
+li{
+   list-style: none;
+}
+.container{
+    width: 960px;
+    margin:auto;
+}
+img{
+    vertical-align: middle;
+}
+.clearfix:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+a{
+    text-decoration: none;
+}
+i{
+    font-family: 'icomoon';
+    font-style: normal;
+}
+td{
+    padding:2px 8px;
+}
+/*头部导航开始*/
+#header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: #722872;
+    width: 100%;
+    height: 80px;
+    color: #fff;
+    box-shadow: 0 2px 5px #aaa;
+    /*padding:20px 100px 0;*/
+}
+#header .container{
+    margin-top: 20px;
+}
+#header h1{
+    float: left;
+}
+#header a{
+    color: #fff;
+    font-weight: 900;
+}
+#header #nav{
+    float: right;
+    width: 500px;
+    text-align: center;
+    line-height: 40px;
+}
+#header #nav a{
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+}
+#header #nav .active{
+    background: #e7e7e7;
+    color:#555;
+}
+#header #nav a:hover{
+    background: rgba(200,200,200,0.5);
+    color:#555;
+}
+/*头部导航结束*/
+
+
+/*个人简介结束*/
+.introduction{
+    margin-top: 80px;
+    padding:50px 0px;
+    background: #eee;
+    box-shadow: 2px 0 5px #aaa, -2px 0 5px #aaa;
+    position: relative;
+}
+.intro{
+    margin-left: 100px;
+}
+.intro h2 span{
+    font-size: 28px;
+    line-height: 50px;
+}
+.intro table{
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 25px;
+}
+.introduction .photo{
+    position: absolute;
+    top:50%;
+    right:100px;
+    margin-top: -100px;
+
+}
+.photo img{
+    border-radius: 10%;
+    box-shadow: 0 0 10px  #888;
+}
+
+/*个人简介结束*/
+
+/*技能开始*/
+.skill, .project, .assessment{
+    padding:50px 0;
+    background:#eee;
+    box-shadow: 2px 0 5px #aaa, -2px 0 5px #aaa;
+    text-align: center;
+}
+.skill h2, .project h2, .assessment h2{
+    margin:0 300px 20px;
+    height: 80px;
+    font-size: 28px;
+    line-height: 80px;
+    text-align: center;
+    border-bottom: 5px solid rgba(135,135,135,0.5);
+}
+#graph div{
+    float: left;
+    width: 300px;
+    height: 250px;
+    padding:5px;
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #fff;
+    margin-left: 5px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+#graph ul{/* 图标展示方式开始 */
+    width: 9999px;
+    height: 200px;
+    transition: 1s;
+    position: absolute;
+}
+#graph ul li{
+    float: left;
+}
+#graph span{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    background:#888;
+    filter: alpha(opacity=50);
+    background: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+#graph span:hover{
+    background: #ccc;
+    filter: alpha(opacity=90);
+    background: rgba(0,0,0,0.9);
+}
+.left{
+    top:75px;
+    left: 5px;
+}
+.right{
+    top:75px;
+    right: 5px;
+}
+#graph ol{
+    position: absolute;
+    bottom: 50px;
+    right: 0px;
+}
+#graph ol li{
+    float: left;
+    width: 15px;
+    height: 15px;
+    padding:5px;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+    background: rgba(100,100,100,0.5);
+    border: 1px solid black;
+    margin-right: 5px;
+    cursor: pointer;
+}
+#graph ol .active{
+    background: rgba(100,100,100,0.9);
+}
+#graph ol li:hover{
+    background: rgba(100,100,100,0.9);
+}
+#graph p{/*图标展示方式结束*/
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+
+
+.skill{/*展示方式按钮开始*/
+    position: relative;
+}
+#displayBtn{
+    position: absolute;
+    top:100px;
+    right:50px;
+}
+#graphBtn, #listBtn{
+    display: inline-block;
+    width: 40px;
+    text-align: center;
+    font-size: 30px;
+    color: black;
+}
+.skill>div:last-child a:hover{/*展示方式按钮结束*/
+    text-shadow: 0 0 5px rgba(255,0,0,0.5);
+}
+
+
+#list ul{/*列表展示方式结束*/
+    margin:0 80px;
+    background-color: #F6F6F6;
+}
+#list li{
+    border: 1px solid #ccc;
+}
+#list li div{
+    float: left;
+}
+#list li div:first-child{
+    width:200px;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 110px;
+    border-right: 1px solid #ccc;
+}
+#list li div:last-child{/*列表展示方式结束*/
+    width:576px;
+    text-align: left;
+    padding: 10px 0 10px 20px;
+    line-height: 20px;
+}
+/*技能结束*/
+
+/*项目开始*/
+.project div{
+    border:1px solid #ccc;
+    float: left;
+    width:400px;
+    padding:15px;
+    margin-left: 30px;
+    margin-bottom: 15px;
+}
+.project table{
+    margin:10px auto;
+    text-align: left;
+
+}
+.project table a{
+    color: #7f65aa;
+}
+.project table caption{
+    font-size: 20px;
+    line-height: 50px;
+    font-weight: 900;
+}
+.project table td:first-child{
+    text-align: center;
+    width:100px;
+}
+.up{
+    transform: translateY(-10px);
+    box-shadow: 0 0 5px 5px #ccc;
+}
+/*项目结束*/
+
+/*自我评价开始*/
+.assessment p{
+    margin:8px 0;
+
+}
+/*自我评价结束*/

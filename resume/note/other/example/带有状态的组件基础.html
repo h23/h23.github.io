@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>10-带有状态的组件.html</title>
+</head>
+<body>
+  <div id="app"></div>
+  <script src="node_modules/@babel/standalone/babel.js"></script>
+  <script src="node_modules/react/umd/react.development.js"></script>
+  <script src="node_modules/react-dom/umd/react-dom.development.js"></script>
+  <script type="text/babel">{/*通过babel自动编译，将ES6>ES5*/}
+    class MyComponent extends React.Component {/*组件类必须继承React.Component类*/
+      constructor () {
+        super() /*子类的constructor方法必须调用父类构造器*/
+        this.state = {/*state属性是可以驱动视图的数据*/
+          message: 'Hello, MyComponent!'
+        }
+      }
+
+      render () {/*组件类中，必须通过 render 渲染函数返回组件模板*/
+        return (
+          <div>
+            {/*调用数据，驱动视图*/}
+            <h1>{this.state.message}</h1>
+            {/*给BTN绑定事件，并修改this指向为类*/}
+            <button onClick={this.handleClick.bind(this)}>点击改变 message</button>>
+          </div>
+        )
+      }
+
+      handleClick (num1, num2, e) {/*事件绑定函数命名规则：handlexxx*/
+        this.setState({/*通过setState方法修改state中的值*/
+          message: 'hello world'
+        })
+      }
+    }
+
+    const element = <MyComponent />{/*插入组件*/}
+
+    ReactDOM.render(element, document.getElementById('app')){/*将组建渲染到#app元素中*/}
+  </script>
+</body>
+</html>

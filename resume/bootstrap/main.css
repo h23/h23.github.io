@@ -1,0 +1,262 @@
+    @font-face{
+        font-family: Heavy;
+        src:url(fonts/SourceHanSansCN-Heavy.otf);
+    }
+    @font-face{
+        font-family: Light;
+        src:url(fonts/SourceHanSansCN-ExtraLight.otf);
+    }
+    *{
+        padding:0;
+        margin:0;
+        font-family: Light;
+        box-sizing: border-box;
+    }
+    ::selection{ /* 文本选中颜色 */
+        background: #7f65aa;
+    }
+    ul{
+        list-style-type: none;
+    }
+    li,a{
+        text-decoration: none;
+    }
+
+/*导航栏*/
+    header{
+        background: #222;
+    }
+    header nav{
+        margin:0px 100px;
+        padding:10px 0;
+    }
+
+    /*浮动显示行导航栏*/
+    header nav a{
+        color: #9d9d9d;
+        font-size: 14px;
+    }
+    header nav li{
+        float:left;
+        padding-left: 30px;
+    }
+    #about{
+        float: right;
+    }
+    #boot{
+        float: left;
+        font-size: 18px;
+        padding:-5px 0;
+    }
+    /*清除浮动*/
+    nav::after{
+        content:" ";
+        display:block;
+        clear:both;
+    }
+    /*添加hover效果*/
+    nav a:hover{
+        color: white;
+    }
+/*简介*/
+    main{
+        background: #6f5499;
+        text-align: center;
+        color: white;
+        font-family: Heavy;
+        font-weight: 500;
+        text-shadow: 1px 1px 10px #666;
+        box-shadow: -2px -2px 10px #4d3277 inset;
+    }
+    .introbox{
+        padding:100px 0;
+    }
+    h1{
+        font-weight: 700;
+        font-size: 90px;
+        font-family: "Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif
+    }
+    .introbox :nth-child(2){
+        font-size: 30px;
+        font-weight: 700;
+        padding:15px 0;
+    }
+    .introbox :nth-child(3){
+        font-size: 18px;
+        font-weight: 700;
+        color: white;
+        background: #337ab7;
+        border:0;
+        border-radius: 5px;
+        padding:10px 30px;
+    }
+    .introbox :nth-child(3):hover{
+        text-decoration: underline;
+    }
+    .introbox :last-child{
+        font-size: 14px;
+        color:#9d9d9d;
+        padding-top: 20px;
+        font-weight: 700;
+    }
+    .introbox :last-child:hover{
+        color:white;
+        text-decoration: underline;
+    }
+/*联系栏*/
+    .contactbox{
+        background: #eee;
+        box-shadow: 1px 0 5px 0 #ccc;
+        text-align: center;
+        color:#555;
+        font-size: 14px;
+    }
+    .contactbox p{
+        display: inline-block;
+        margin:10px 20px;
+    }
+    .contactbox p:nth-child(2){
+        color: #999;
+    }
+    /*加图标*/
+    .contactbox :first-child::before{
+        content: "";
+        background:no-repeat center top url(images/icon.png);
+        display: inline-block;
+        width: 20px;
+        height:20px;
+        padding-right:10px;
+    }
+    .contactbox :last-child::before{
+        content: "";
+        background:no-repeat center bottom url(images/icon.png);
+        display: inline-block;
+        width: 20px;
+        height:20px;
+        padding-right:10px;
+    }
+    /*hover效果*/
+    .contactbox :first-child:hover, .contactbox :last-child:hover{
+        text-decoration: underline;
+        color:red;
+    }
+
+/*内容*/
+    section{
+        width: 90%;
+        margin:0 auto;
+        text-align: center;
+    }
+    h2{
+        font-size: 40px;
+        font-weight: bold;
+        color: #222;
+        margin:50px 0 5px 0;
+        text-shadow: 0px 0px 1px #666;
+    }
+    h2+p{
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    #hr1{
+        border:1px #eee solid;
+        margin:0 20%;
+        margin-bottom: 40px;
+    }
+    /*盒子浮动*/
+    section div{
+        border:1px solid #ccc;
+        float:left;
+        width: 21%;
+        height: 300px;
+        margin:20px;
+    }
+    /*盒子内容*/
+    .box{
+        margin:3px;
+        background-color: #7f65aa;
+        height: 33%;
+        padding: 10px 50px;
+        font-size: 30px;
+        color: white;
+        font-weight: 900;
+    }
+    .box+a{
+        font-size: 25px;
+        color: #337ab7;
+        font-weight: 900;
+        margin-top: 20px;
+        display: block;
+    }
+    section div :nth-child(3){
+        font-size: 14px;
+    }
+    section div :nth-child(4){
+        font-size: 14px;
+        margin-top: 10px;
+        padding:0 20px;
+    }
+    /*清除浮动*/
+    section::after{
+        content: "";
+        clear:both;
+        display: block;
+    }
+/*footer*/
+    footer{
+        box-shadow: -1px 0 5px #ccc;
+        font-size: 14px;
+        color:#333;
+    }
+    .footbox{
+        width: 90%;
+        margin:0 auto;
+    }
+    .foot1{
+        float: left;
+        margin-left: 20px;
+    }
+    h5{
+        color: #6f5499;
+        font-size: 30px;
+        padding-top: 30px;
+    }
+    h5+p{
+        padding-top: 5px;
+    }
+/*友链*/
+    .foot2{
+        float:right;
+        margin-right: 30px;
+    }
+    .foot2 ul{
+        float: left;
+        margin:0 40px;
+    }
+    footer ul li:first-child{
+        color: #3d2166;
+        padding:5px 0;
+        font-size: 16px;
+    }
+/*清除浮动*/
+    #hr2{
+        border:1px #eee solid;
+        margin:0 20%;
+        margin-bottom: 10px;
+        clear:both;
+    }
+    .lastbox{
+        text-align: center;
+        font-size: 14px;
+        color:#333;
+    }
+    .lastbox p{
+        display: inline-block;
+        padding:0 10px;
+    }
+    .lastbox p:nth-child(2){
+        color: #999;
+    }
+    .lastbox :first-child:hover,.lastbox :last-child:hover{
+        text-decoration: underline;
+    }

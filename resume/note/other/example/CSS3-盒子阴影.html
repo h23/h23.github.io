@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>阴影</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+        div{
+            border-radius: 50%;
+            text-align: center;
+        }
+        .box1{
+            width:300px;
+            height: 300px;
+            margin:0 auto;
+            margin-top:50px;
+            border:1px white solid;
+
+            box-shadow: 0 -10px 5px 1px rgba(100,255,50,0.6),
+                        0 -20px 5px 1px rgba(255,255,50,0.3),
+                        0 10px 5px 1px rgba(200,100,100,0.6),
+                        0 20px 5px 1px rgba(50,50,255,0.3),
+                        10px 0 5px 1px rgba(50,50,255,0.6),
+                        20px 0 5px 1px rgba(20,20,255,0.3),
+                        -10px 0 5px 1px rgba(200,150,150,0.6),
+                        -20px 0 5px 1px rgba(150,255,100,0.3)
+                        ;
+
+        }
+        .box2{
+            width:200px;
+            height: 200px;
+            border:1px pink solid;
+            margin:0 auto;
+            margin-top:50px;
+        }
+        .box3{
+            width:180px;
+            height: 180px;
+            border:1px blue solid;
+            padding-top:35%;
+            margin:0 auto;
+            margin-top:10px;
+
+            font-size: 25px;
+            letter-spacing: 10px;
+            color: #22cc22;
+            font-weight: 100;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2">
+            <div class="box3">极客学院</div>
+        </div>
+    </div>
+</body>
+</html>
