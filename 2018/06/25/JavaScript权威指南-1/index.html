@@ -13,15 +13,15 @@
     
 
     
-        <meta name="description" content="Hexo结合GitHub搭建博客基础Hexo简介Hexo是一个博客框架，用Markdown解析文档，用主题生成静态网页。
-Hexo安装前提条件：已安装nodeJS，git安装：
-npm install -g hexo-cli
-博客搭建步骤
-建站
-新建文章
-开启服务器，本地测试
-生成文件
-部署到Git"/>
+        <meta name="description" content="第二章 词法结构编程语言的词法结构：用来描述如何使用这门语言来编写程序。
+如规定：
+
+变量名是什么样的
+怎么写注释
+程序语句之间如何分隔等
+
+1.字符集JavaScript程序是用Unicode字符集编写的。Unicode是ASCII和Latin-1的超集。
+1.1 区分大小写关键字，变量，函数名等"/>
     
 
     <!--Author-->
@@ -31,20 +31,20 @@ npm install -g hexo-cli
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Hexo学习"/>
+        <meta property="og:title" content="JavaScript权威指南-1"/>
     
 
     <!--Open Graph Description-->
     
-        <meta property="og:description" content="Hexo结合GitHub搭建博客基础Hexo简介Hexo是一个博客框架，用Markdown解析文档，用主题生成静态网页。
-Hexo安装前提条件：已安装nodeJS，git安装：
-npm install -g hexo-cli
-博客搭建步骤
-建站
-新建文章
-开启服务器，本地测试
-生成文件
-部署到Git"/>
+        <meta property="og:description" content="第二章 词法结构编程语言的词法结构：用来描述如何使用这门语言来编写程序。
+如规定：
+
+变量名是什么样的
+怎么写注释
+程序语句之间如何分隔等
+
+1.字符集JavaScript程序是用Unicode字符集编写的。Unicode是ASCII和Latin-1的超集。
+1.1 区分大小写关键字，变量，函数名等"/>
     
 
     <!--Open Graph Site Name-->
@@ -71,7 +71,7 @@ npm install -g hexo-cli
 
     <!-- Title -->
     
-    <title>Hexo学习 - </title>
+    <title>JavaScript权威指南-1 - </title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -181,13 +181,13 @@ npm install -g hexo-cli
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>Hexo学习</h1>
+                    <h1>JavaScript权威指南-1</h1>
                     
                     <span class="meta">
                         <!-- Date and Author -->
                         
                         
-                            2018-06-20
+                            2018-06-25
                         
                     </span>
                 </div>
@@ -209,42 +209,31 @@ npm install -g hexo-cli
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <h1 id="Hexo结合GitHub搭建博客基础"><a href="#Hexo结合GitHub搭建博客基础" class="headerlink" title="Hexo结合GitHub搭建博客基础"></a>Hexo结合GitHub搭建博客基础</h1><h2 id="Hexo简介"><a href="#Hexo简介" class="headerlink" title="Hexo简介"></a>Hexo简介</h2><p>Hexo是一个博客框架，用Markdown解析文档，用主题生成静态网页。</p>
-<h2 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h2><p>前提条件：已安装nodeJS，git<br>安装：</p>
-<pre><code>npm install -g hexo-cli
-</code></pre><h2 id="博客搭建步骤"><a href="#博客搭建步骤" class="headerlink" title="博客搭建步骤"></a>博客搭建步骤</h2><ol>
-<li>建站</li>
-<li>新建文章</li>
-<li>开启服务器，本地测试</li>
-<li>生成文件</li>
-<li>部署到GitHub</li>
+                <h1 id="第二章-词法结构"><a href="#第二章-词法结构" class="headerlink" title="第二章 词法结构"></a>第二章 词法结构</h1><p><strong>编程语言的词法结构：</strong>用来描述如何使用这门语言来编写程序。</p>
+<p>如规定：</p>
+<ol>
+<li>变量名是什么样的</li>
+<li>怎么写注释</li>
+<li>程序语句之间如何分隔等</li>
 </ol>
-<h3 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h3><p>在指定文件夹下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init &lt;folder&gt;</span><br><span class="line">cd &lt;folder&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-<p>完成命令后，folder下多出如下文件：<br><strong>_config.yml:</strong> 网站的配置信息。<br><strong>source:</strong> 存放用户资源的地方<br><strong>themes:</strong> 主题文件夹<br><strong>package.json:</strong> 应用程序的信息<br><strong>scaffolds:</strong> 模版文件夹</p>
-<h3 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h3><pre><code>hexo new [layout] &lt;title&gt;
-</code></pre><p>layout默认为post，存放路径<code>source/_posts</code><br>使用markdown语法，编辑新建的文章</p>
-<h3 id="开启服务器，本地测试"><a href="#开启服务器，本地测试" class="headerlink" title="开启服务器，本地测试"></a>开启服务器，本地测试</h3><p>安装服务器：<br>    npm install hexo-server –save<br>开启服务器：<br>    hexo server<br>开启后，可通过<code>http://localhost:4000</code>访问博客。</p>
-<h3 id="生成文件"><a href="#生成文件" class="headerlink" title="生成文件"></a>生成文件</h3><pre><code>hexo generate
-</code></pre><p>生成的文件，存放在public中</p>
-<h3 id="部署到GitHub"><a href="#部署到GitHub" class="headerlink" title="部署到GitHub"></a>部署到GitHub</h3><p>安装hexo-deployer-git</p>
-<pre><code>npm install hexo-deployer-git --save
-</code></pre><p>方式1：修改_config.yml配置文件，在Deployment部分中：</p>
-<pre><code>deploy:
-    type: git
-    repo: &lt;GitHub Pages仓库 url&gt;
-</code></pre><p>完成后，可通过xx.github.io来访问博客。<br><strong>这种方式，会直接覆盖仓库。原内容需要放到public下重新提交。</strong></p>
-<p>方式2：<br>1.新建一个仓库，用于存放hexo博客。<br>2.修改_config.yml配置文件，在URL部分中：</p>
-<pre><code>url: https://xx.github.io/blog
-root: /blog/
-</code></pre><p>3.在Deployment部分中：</p>
-<pre><code>deploy:
-    type: git
-    repo: 新仓库地址
-</code></pre><p>4.在GitHub上，修改新仓库的GitHub Pages为master branch<br>完成后，可通过xx.github.io/blog来访问博客。</p>
-<h2 id="更换主题-可选"><a href="#更换主题-可选" class="headerlink" title="更换主题(可选)"></a>更换主题(可选)</h2><p>1.在<a href="https://hexo.io/themes/" title="Hexo主题" target="_blank" rel="noopener">Hexo主题</a>上，找到相应主题。<br>2.将主题clone到themes目录下<br>3.修改_config.yml配置文件，在Extensions部分中：</p>
-<pre><code>theme: 主题名
-</code></pre>
+<h2 id="1-字符集"><a href="#1-字符集" class="headerlink" title="1.字符集"></a>1.字符集</h2><p>JavaScript程序是用Unicode字符集编写的。Unicode是ASCII和Latin-1的超集。</p>
+<h3 id="1-1-区分大小写"><a href="#1-1-区分大小写" class="headerlink" title="1.1 区分大小写"></a>1.1 区分大小写</h3><p>关键字，变量，函数名等所有标识符都必须采用一致的大小写形式。</p>
+<h3 id="1-2-Unicode转义序列"><a href="#1-2-Unicode转义序列" class="headerlink" title="1.2 Unicode转义序列"></a>1.2 Unicode转义序列</h3><p>有些计算机硬件和软件无法显示或输入Unicode字符全集。为了兼容，JavaScript定义了一种特殊序列–Unicode转义序列。</p>
+<p>用6个ASCII字符（\u开头，后接4个十六进制数）表示任意16位Unicode内码。</p>
+<h2 id="2-注释"><a href="#2-注释" class="headerlink" title="2.注释"></a>2.注释</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//单行注释</span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line">*多行注释</span><br><span class="line">*/</span><br></pre></td></tr></table></figure>
+<h2 id="3-直接量"><a href="#3-直接量" class="headerlink" title="3.直接量"></a>3.直接量</h2><p><strong>直接量</strong>程序中直接使用的数据值。</p>
+<h2 id="4-标识符"><a href="#4-标识符" class="headerlink" title="4.标识符"></a>4.标识符</h2><p><strong>标识符</strong>用来对变量和函数进行命名。</p>
+<p>规则：</p>
+<ol>
+<li>只能包含数字，字母，下划线和美元符。</li>
+<li>不能以数字开头。</li>
+</ol>
+<h2 id="5-保留字"><a href="#5-保留字" class="headerlink" title="5.保留字"></a>5.保留字</h2><p><strong>关键字：</strong>javascript把一些标识符拿出做自己的关键字。这些关键字不能再作为变量名，函数名。</p>
+<h2 id="6-可选的分号"><a href="#6-可选的分号" class="headerlink" title="6.可选的分号"></a>6.可选的分号</h2><p>javascript使用分号将语句分隔开。</p>
+<p>如果语句各自独占一行，可省略分号。</p>
+<p>程序结尾或花括号之前的分号也可省略。</p>
+<p>return，break，continue后若紧跟着换行，javascript会在换行处填补分号。</p>
+
 
                 
             </div>
