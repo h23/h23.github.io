@@ -39,7 +39,7 @@ npm install
 
 	hexo new [layout] <title>
 
-layout默认为post，存放路径```source/_posts```
+layout默认为post，存放路径`source/_posts`
 使用markdown语法，编辑新建的文章
 
 ### 开启服务器，本地测试
@@ -47,7 +47,7 @@ layout默认为post，存放路径```source/_posts```
 	npm install hexo-server --save
 开启服务器：
 	hexo server
-开启后，可通过```http://localhost:4000```访问博客。
+开启后，可通过`http://localhost:4000`访问博客。
 
 
 ###  生成文件
@@ -96,6 +96,8 @@ layout默认为post，存放路径```source/_posts```
 
 # 在多台电脑上更新博客
 
+公司电脑上配置：
+
 1. 在GitHub上新建分支
 
 2. 将新建的分支设为默认分支
@@ -122,5 +124,15 @@ layout默认为post，存放路径```source/_posts```
 
 6. 提交成功后，可在github上查看两个分支的差异。
 
-7. 
+
+
+在家的电脑上配置：
+
+1. 克隆仓库
+2. 执行`npm install`
+3. 更新博客
+4. 执行`hexo d -g`，此改动更新到master上
+5. 提交到github，此改动更新到hexo上
+
+
 
