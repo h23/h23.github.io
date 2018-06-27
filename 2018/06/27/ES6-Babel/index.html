@@ -264,23 +264,22 @@ ECMAScript简称ECMA或ES
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run build</span><br></pre></td></tr></table></figure>
 <p>编译好的代码在lib目录下。</p>
 <h3 id="3-2-预设"><a href="#3-2-预设" class="headerlink" title="3.2 预设"></a>3.2 预设</h3><p>预设是一些插件的集合。预设可分成两类：按年份，按阶段。</p>
-<blockquote>
-<p>按年份: 已经批准的，浏览器将要实现的功能 </p>
-<p>e.g. babel-preset-es2015 </p>
-</blockquote>
-<blockquote>
-<p>按阶段：没有被批准的功能 </p>
+<ul>
+<li><p>按年份: 已经批准的，浏览器将要实现的功能 e.g. babel-preset-es2015 </p>
+</li>
+<li><p>按阶段：没有被批准的功能 </p>
 <p>每个提案有5个阶段 ：</p>
-<ol>
+<ul>
 <li>stage-0 稻草人阶段， 就是一个想法 </li>
 <li>stage-1 建议阶段，值得去努力 </li>
 <li>stage-2 草案阶段， 初始的细节描述 </li>
 <li>stage-3 候选阶段，草案基本完成，浏览器厂商实验性的实现 </li>
 <li>stage-4 完成阶段，添加到下一年的版本中 </li>
-</ol>
+</ul>
 <p>前期阶段的插件大于后期阶段的插件 ，stage 0&gt;stage 1&gt;stage 2&gt;stage 3 ，只安装一个就行 。</p>
 <p>如果没提供es2015相关的预设，阶段性的预设就不能用。</p>
-</blockquote>
+</li>
+</ul>
 <h3 id="3-3-babel-polyfill"><a href="#3-3-babel-polyfill" class="headerlink" title="3.3 babel-polyfill"></a>3.3 babel-polyfill</h3><p>Babel默认只转换新的JS语法，而不转换新API。若想要使用新API，就必须使用babel-polyfill。</p>
 <p>原理：将API用JS重写出来，那么旧浏览器就可以使用这个API了。 </p>
 <p>操作步骤：</p>
@@ -376,21 +375,15 @@ ECMAScript简称ECMA或ES
 <li><p>操作方法</p>
 <ul>
 <li><p>set.add(value)： 添加set元素，并返回set结构本身。重复值不会被添加。</p>
-<blockquote>
 <p>内部用===判断两值是否相同（差别NaN等于自身）。</p>
 <p><code>s.add(1).add(2).add(2);</code>返回本身则可链式操作</p>
-</blockquote>
 </li>
 <li><p>set.delete(value)：删除某个值，返回一个布尔值，表示删除是否成功。</p>
-<blockquote>
 <p>s.delete(2);</p>
-</blockquote>
 </li>
 <li><p>set.has(value)：返回一个布尔值，表示该值是否为Set的成员。</p>
-<blockquote>
 <p>s.has(1)   ==&gt;true</p>
 <p>s.has(2)   ==&gt;false</p>
-</blockquote>
 </li>
 <li><p>set.clear()：清除所有成员，没有返回值。</p>
 </li>
@@ -398,15 +391,17 @@ ECMAScript简称ECMA或ES
 </li>
 <li><p>遍历方法：遍历顺序就是插入顺序。</p>
 <ul>
-<li>set.keys()：返回键名的遍历器，行为与values()一致</li>
-<li>set.values()：返回键值的遍历器，行为与keys()一致</li>
-<li>set.entries()：返回键值对的遍历器  </li>
-<li>set.forEach()：使用回调函数遍历每个成员</li>
-</ul>
-<blockquote>
+<li><p>set.keys()：返回键名的遍历器，行为与values()一致</p>
+</li>
+<li><p>set.values()：返回键值的遍历器，行为与keys()一致</p>
+</li>
+<li><p>set.entries()：返回键值对的遍历器  </p>
+</li>
+<li><p>set.forEach()：使用回调函数遍历每个成员</p>
 <p>set实例默认可遍历，默认遍历器生成函数就是values()。</p>
 <p>Set.prototype[Symbol.iterator] === Set.prototype.values</p>
-</blockquote>
+</li>
+</ul>
 </li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">let set = new Set([&apos;red&apos;, &apos;green&apos;, &apos;blue&apos;]);</span><br><span class="line"></span><br><span class="line">for (let item of set.keys()/set.values()/set) &#123;</span><br><span class="line">  console.log(item);</span><br><span class="line">&#125;</span><br><span class="line">// red</span><br><span class="line">// green</span><br><span class="line">// blue</span><br><span class="line"></span><br><span class="line">for (let item of set.entries()) &#123;</span><br><span class="line">  console.log(item);</span><br><span class="line">&#125;</span><br><span class="line">// [&quot;red&quot;, &quot;red&quot;]</span><br><span class="line">// [&quot;green&quot;, &quot;green&quot;]</span><br><span class="line">// [&quot;blue&quot;, &quot;blue&quot;]</span><br><span class="line"></span><br><span class="line">set = new Set([1, 4, 9]);</span><br><span class="line">set.forEach((value, key，set) =&gt; console.log(key + &apos; : &apos; + value))</span><br><span class="line">// 1 : 1</span><br><span class="line">// 4 : 4</span><br><span class="line">// 9 : 9</span><br></pre></td></tr></table></figure>
