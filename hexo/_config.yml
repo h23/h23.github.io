@@ -79,4 +79,4 @@ theme: cleanBlog
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/h23/h23.github.io.git
+  repo: https://h23:atc1008014840@github.com/h23/h23.github.io.git
