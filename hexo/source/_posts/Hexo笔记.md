@@ -1,7 +1,7 @@
 ---
 title: Hexo学习
 date: 2018-06-20 16:20:47
-tags:
+tags: Hexo
 ---
 # Hexo结合GitHub搭建博客基础
 ## Hexo简介

@@ -1,7 +1,7 @@
 ---
 title: ES6+Babel
 date: 2018-06-27 15:05:02
-tags:
+tags: ES6
 ---
 
 ## 1. 历史

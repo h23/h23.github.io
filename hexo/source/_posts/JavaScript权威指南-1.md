@@ -1,7 +1,7 @@
 ---
 title: JavaScript权威指南-1
 date: 2018-06-25 08:57:38
-tags:
+tags: JS
 ---
 
 # 第二章 词法结构

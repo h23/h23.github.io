@@ -1,7 +1,7 @@
 ---
 title: npm
 date: 2018-06-27 15:33:09
-tags:
+tags: NPM
 ---
 
 # npm简介

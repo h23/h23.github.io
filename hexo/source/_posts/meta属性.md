@@ -1,7 +1,7 @@
 ---
 title: meta属性
 date: 2018-08-03 08:47:04
-tags:
+tags: META
 ---
 
 # 1. 基本概念
