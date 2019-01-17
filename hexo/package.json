@@ -18,5 +18,8 @@
     "hexo-renderer-marked": "^0.3.0",
     "hexo-renderer-stylus": "^0.3.3",
     "hexo-server": "^0.2.0"
+  },
+  "devDependencies": {
+    "hexo-asset-image": "0.0.3"
   }
 }
